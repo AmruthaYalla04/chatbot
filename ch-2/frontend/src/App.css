@@ -1,0 +1,139 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.chat-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.chat-threads, .chat-messages {
+  width: 45%;
+}
+
+.chat-threads ul, .chat-messages ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.chat-threads li, .chat-messages li {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.chat-threads li:hover, .chat-messages li:hover {
+  background-color: #f0f0f0;
+}
+
+input {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin: 10px 0;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 5px;
+}
+
+/* Image uploader styles */
+.image-uploader {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.upload-button {
+  color: var(--input-icon) !important;
+}
+
+.upload-button:hover {
+  color: var(--input-icon-hover) !important;
+}
+
+.cancel-button {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  color: var(--error-color) !important;
+  background-color: var(--bg-color);
+  border-radius: 50%;
+  width: 16px !important;
+  height: 16px !important;
+  box-shadow: 0px 1px 3px rgba(0,0,0,0.3);
+}
+
+.image-preview-container {
+  position: absolute;
+  bottom: 45px;
+  left: 0;
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  padding: 4px;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.2);
+  z-index: 5;
+}
+
+.image-preview {
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+/* Message styling enhancements for images */
+.message-content img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin: 8px 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.bot .message-content h1 {
+  font-size: 1.4rem;
+  margin-top: 16px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 6px;
+}
+
+.bot .message-content h2 {
+  font-size: 1.2rem;
+  margin-top: 14px;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,77 @@
+.theme-toggle-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.theme-icon {
+  display: flex;
+  align-items: center;
+  color: inherit; /* Changed from white to inherit to adapt to container */
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.theme-toggle {
+  position: relative;
+  display: inline-block;
+  width: 40px; /* Slightly smaller for sidebar */
+  height: 20px; /* Slightly smaller for sidebar */
+  margin: 0;
+}
+
+.theme-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.theme-toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.2); /* Darker in light mode */
+  transition: 0.4s;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.theme-toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 16px; /* Adjust for smaller toggle */
+  width: 16px;
+  left: 2px;
+  bottom: 1px;
+  background-color: white;
+  transition: 0.3s;
+  border-radius: 50%;
+}
+
+input:checked + .theme-toggle-slider {
+  background-color: #7c4dff; /* Purple to match theme when checked */
+  border-color: #6a3de8;
+}
+
+input:checked + .theme-toggle-slider:before {
+  transform: translateX(18px);
+  background-color: white;
+}
+
+/* Animation for the toggle */
+.theme-toggle-slider:before {
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+/* Dark mode specific styling */
+.dark .theme-toggle-slider {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark .theme-icon {
+  color: rgba(255, 255, 255, 0.9);
+}

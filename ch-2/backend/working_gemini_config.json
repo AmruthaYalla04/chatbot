@@ -1,0 +1,7 @@
+{
+  "api_version": "v1",
+  "model": "models",
+  "uses_models_prefix": false,
+  "full_url_template": "https://generativelanguage.googleapis.com/v1/models/gemini-1.5-pro:generateContent?key=[API_KEY]",
+  "response_time": 0.8298153877258301
+}

@@ -1,0 +1,588 @@
+/* Modern Header with Improved Purple Glassmorphism */
+
+/* New Professional Header Styling */
+
+/* Base header structure */
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 64px;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  animation: headerFadeIn 0.6s ease-out;
+}
+
+/* Enhanced glassmorphism effect that matches the new chat button color scheme */
+.glassmorphism {
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(124, 77, 255, 0.12);
+  box-shadow: 
+    0 4px 30px rgba(0, 0, 0, 0.07),
+    0 1px 0 rgba(255, 255, 255, 0.06) inset;
+}
+
+/* Light mode header with purple tint */
+.light-theme .glassmorphism {
+  background: linear-gradient(135deg, 
+    rgba(156, 39, 176, 0.08) 0%,
+    rgba(124, 77, 255, 0.06) 50%,
+    rgba(156, 39, 176, 0.08) 100%
+  );
+  border-bottom-color: rgba(124, 77, 255, 0.15);
+  box-shadow: 
+    0 4px 20px rgba(124, 77, 255, 0.07),
+    0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  background-size: 200% 200%;
+  animation: subtleGradientShift 15s ease infinite;
+}
+
+/* Dark mode header with purple tint */
+.dark-theme .glassmorphism {
+  background: linear-gradient(135deg, 
+    rgba(156, 39, 176, 0.15) 0%, 
+    rgba(124, 77, 255, 0.12) 50%,
+    rgba(156, 39, 176, 0.15) 100%
+  );
+  border-bottom-color: rgba(156, 39, 176, 0.2);
+  box-shadow: 
+    0 4px 20px rgba(0, 0, 0, 0.25),
+    0 1px 0 rgba(124, 77, 255, 0.1) inset;
+  background-size: 200% 200%;
+  animation: subtleGradientShift 15s ease infinite;
+}
+
+/* Gradient title that matches the purple theme */
+.header-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: -0.5px;
+  position: relative;
+  white-space: nowrap;
+}
+
+.light-theme .header-title {
+  background: linear-gradient(135deg, #9c27b0, #7c4dff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
+}
+
+.dark-theme .header-title {
+  background: linear-gradient(135deg, #bb6bd9, #b47cff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 200px;
+}
+
+.header-center {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  justify-content: flex-end;
+  flex: 1;
+}
+
+/* Improved header actions container to match the purple theme */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: flex-end;
+  min-width: 200px;
+  padding: 6px 12px;
+  border-radius: 40px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.light-theme .header-actions {
+  background: linear-gradient(135deg, 
+    rgba(156, 39, 176, 0.08) 0%,
+    rgba(124, 77, 255, 0.06) 100%
+  );
+  border: 1px solid rgba(124, 77, 255, 0.15);
+  box-shadow: 0 2px 8px rgba(124, 77, 255, 0.05);
+}
+
+.dark-theme .header-actions {
+  background: linear-gradient(135deg, 
+    rgba(156, 39, 176, 0.15) 0%,
+    rgba(124, 77, 255, 0.12) 100%
+  );
+  border: 1px solid rgba(156, 39, 176, 0.25);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Header icon button styling */
+.header-icon-button {
+  transition: transform 0.2s, color 0.2s !important;
+}
+
+.light-theme .header-icon-button {
+  color: #7c4dff !important;
+}
+
+.dark-theme .header-icon-button {
+  color: #b47cff !important;
+}
+
+.header-icon-button:hover {
+  transform: scale(1.1);
+}
+
+.light-theme .header-icon-button:hover {
+  color: #9c27b0 !important;
+}
+
+.dark-theme .header-icon-button:hover {
+  color: #ce93d8 !important;
+}
+
+/* Model selector styling */
+.model-selector-container {
+  border-radius: 20px;
+  padding: 4px 12px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.light-theme .model-selector-container {
+  background: linear-gradient(135deg, 
+    rgba(156, 39, 176, 0.08) 0%,
+    rgba(124, 77, 255, 0.06) 100%
+  );
+  border: 1px solid rgba(124, 77, 255, 0.15);
+  box-shadow: 0 2px 8px rgba(124, 77, 255, 0.05);
+}
+
+.dark-theme .model-selector-container {
+  background: linear-gradient(135deg, 
+    rgba(156, 39, 176, 0.15) 0%,
+    rgba(124, 77, 255, 0.12) 100%
+  );
+  border: 1px solid rgba(156, 39, 176, 0.25);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Model-specific styling */
+.light-theme .openai-model {
+  box-shadow: 0 0 10px rgba(16, 163, 127, 0.1);
+}
+
+.light-theme .gemini-model {
+  box-shadow: 0 0 10px rgba(25, 118, 210, 0.1);
+}
+
+.dark-theme .openai-model {
+  box-shadow: 0 0 10px rgba(16, 163, 127, 0.2);
+}
+
+.dark-theme .gemini-model {
+  box-shadow: 0 0 10px rgba(25, 118, 210, 0.2);
+}
+
+/* Add Claude model styling */
+.light-theme .claude-model {
+  box-shadow: 0 0 10px rgba(158, 79, 99, 0.1);
+}
+
+.dark-theme .claude-model {
+  box-shadow: 0 0 10px rgba(158, 79, 99, 0.2);
+}
+
+/* Add Claude color highlight for model-specific messages */
+.message.bot[data-model="claude"] {
+  border-left: 3px solid #9e4f63;
+}
+
+/* Claude model indicator styling */
+.model-indicator.claude {
+  background-color: rgba(158, 79, 99, 0.15);
+}
+
+/* Fix dropdown text color in light mode */
+.model-select {
+  min-width: 120px !important;
+  transition: all 0.3s ease;
+}
+
+.light-theme .model-select {
+  color: #333 !important;
+}
+
+.dark-theme .model-select {
+  color: #fff !important;
+}
+
+/* Fix dropdown menu item text color */
+.light-theme .model-menu-item {
+  color: #333 !important;
+}
+
+.dark-theme .model-menu-item {
+  color: #fff !important;
+}
+
+.model-select-value {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+}
+
+.model-menu-item {
+  padding: 8px 16px !important;
+  min-width: 150px;
+}
+
+.model-icon {
+  margin-right: 8px;
+  opacity: 0.9;
+}
+
+.model-menu-text {
+  font-size: 14px;
+  letter-spacing: 0.3px;
+}
+
+/* Remove select underline */
+.model-select .MuiOutlinedInput-notchedOutline {
+  border: none !important;
+}
+
+/* Feature badge styling */
+.feature-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.light-theme .feature-badge {
+  background: linear-gradient(135deg,
+    rgba(156, 39, 176, 0.08) 0%,
+    rgba(124, 77, 255, 0.06) 100%
+  );
+  color: #9c27b0;
+  border: 1px solid rgba(124, 77, 255, 0.15);
+}
+
+.dark-theme .feature-badge {
+  background: linear-gradient(135deg,
+    rgba(156, 39, 176, 0.15) 0%,
+    rgba(124, 77, 255, 0.12) 100%
+  );
+  color: #bb6bd9;
+  border: 1px solid rgba(156, 39, 176, 0.25);
+}
+
+.badge-text {
+  display: none;
+}
+
+.feature-badge:hover .badge-text {
+  display: inline-block;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Theme toggle button styling */
+.theme-toggle-button {
+  transition: transform 0.2s, color 0.2s !important;
+}
+
+.light-theme .theme-toggle-button {
+  color: #333 !important;
+}
+
+.dark-theme .theme-toggle-button {
+  color: #fff !important;
+}
+
+.theme-toggle-button:hover {
+  transform: rotate(12deg) scale(1.1);
+}
+
+.light-theme .theme-toggle-button:hover {
+  color: #7c4dff !important;
+}
+
+.dark-theme .theme-toggle-button:hover {
+  color: #a48fff !important;
+}
+
+/* Adjust header position when sidebar is open */
+.sidebar.open ~ .chat-container .chat-header {
+  left: 280px;
+  width: calc(100% - 280px);
+}
+
+/* Model changed animation */
+@keyframes modelChanged {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.model-changed {
+  animation: modelChanged 0.5s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .chat-header {
+    padding: 0 16px;
+    height: 56px;
+  }
+  
+  .header-title {
+    font-size: 18px;
+  }
+  
+  .badge-text {
+    display: none;
+  }
+  
+  .feature-badge {
+    padding: 4px 8px;
+  }
+  
+  .header-actions {
+    padding: 4px 10px;
+    gap: 10px;
+  }
+  
+  .sidebar.open ~ .chat-container .chat-header {
+    left: 0;
+    width: 100%;
+  }
+
+  .header-version-badge,
+  .header-feature-button span {
+    display: none;
+  }
+  
+  .header-center {
+    gap: 6px;
+  }
+  
+  .header-actions {
+    gap: 6px;
+    min-width: auto;
+  }
+  
+  .api-usage-indicator {
+    padding: 4px;
+  }
+  
+  .api-usage-bar {
+    width: 40px;
+  }
+  
+  .header-feature-button {
+    min-width: 0 !important;
+    padding: 4px !important;
+  }
+  
+  .header-title {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-title {
+    font-size: 16px;
+    max-width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .model-selector-container {
+    padding: 2px 8px;
+  }
+  
+  .model-select {
+    min-width: 90px !important;
+    font-size: 13px !important;
+  }
+
+  .api-usage-indicator,
+  .header-feature-button {
+    display: none !important;
+  }
+  
+  .header-center {
+    justify-content: flex-end;
+  }
+  
+  .chat-header {
+    padding: 0 10px;
+  }
+}
+
+/* Add a subtle shine/glow effect on hover for glassmorphism elements */
+.light-theme .glassmorphism::before,
+.light-theme .header-actions::before,
+.light-theme .model-selector-container::before,
+.light-theme .feature-badge::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.15),
+    rgba(255, 255, 255, 0)
+  );
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+/* Add subtle animation for the purple gradient effect */
+@keyframes subtleGradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Version badge */
+.header-version-badge {
+  background: rgba(124, 77, 255, 0.15);
+  color: #7c4dff;
+  border-radius: 12px;
+  padding: 2px 8px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  height: 20px;
+}
+
+.dark-theme .header-version-badge {
+  background: rgba(156, 39, 176, 0.2);
+  color: #ce93d8;
+}
+
+/* Header action icons */
+.header-action-icon {
+  color: #7c4dff !important;
+  transition: transform 0.2s ease, background-color 0.2s ease !important;
+  width: 36px !important;
+  height: 36px !important;
+}
+
+.header-action-icon:hover {
+  transform: scale(1.1);
+  background-color: rgba(124, 77, 255, 0.1) !important;
+}
+
+.dark-theme .header-action-icon {
+  color: #b47cff !important;
+}
+
+.dark-theme .header-action-icon:hover {
+  background-color: rgba(156, 39, 176, 0.2) !important;
+}
+
+/* API Usage Indicator */
+.api-usage-indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 8px;
+  border-radius: 20px;
+  background-color: rgba(124, 77, 255, 0.08);
+  border: 1px solid rgba(124, 77, 255, 0.15);
+  cursor: default;
+}
+
+.api-usage-indicator svg {
+  color: #7c4dff;
+  font-size: 16px;
+}
+
+.dark-theme .api-usage-indicator svg {
+  color: #b47cff;
+}
+
+.api-usage-bar {
+  width: 60px;
+  height: 6px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.dark-theme .api-usage-bar {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.api-usage-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 1s ease, background-color 1s ease;
+}
+
+/* Header feature buttons */
+.header-feature-button {
+  text-transform: none !important;
+  font-size: 12px !important;
+  padding: 3px 10px !important;
+  border-color: rgba(124, 77, 255, 0.5) !important;
+  color: #7c4dff !important;
+  background-color: rgba(124, 77, 255, 0.05) !important;
+  border-radius: 20px !important;
+  transition: all 0.2s ease !important;
+}
+
+.header-feature-button:hover {
+  border-color: rgba(124, 77, 255, 0.8) !important;
+  background-color: rgba(124, 77, 255, 0.1) !important;
+  transform: translateY(-1px);
+}
+
+.dark-theme .header-feature-button {
+  border-color: rgba(156, 39, 176, 0.5) !important;
+  color: #ce93d8 !important;
+  background-color: rgba(156, 39, 176, 0.1) !important;
+}
+
+.dark-theme .header-feature-button:hover {
+  border-color: rgba(156, 39, 176, 0.8) !important;
+  background-color: rgba(156, 39, 176, 0.15) !important;
+}

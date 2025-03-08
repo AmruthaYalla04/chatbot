@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chatbot</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Chatbot</h1>
+            <div class="model-selector">
+                <label for="model-select">AI Model:</label>
+                <select id="model-select">
+                    <option value="openai">OpenAI (GPT)</option>
+                    <option value="gemini">Google Gemini</option>
+                </select>
+            </div>
+        </header>
+        
+        <main>
+            <div class="chat-container">
+                <div class="chat-messages" id="chat-messages">
+                    <!-- Messages will be added here -->
+                </div>
+                
+                <div class="chat-input">
+                    <textarea id="message-input" placeholder="Type your message here..."></textarea>
+                    <button id="send-button">Send</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

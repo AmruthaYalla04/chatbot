@@ -1,0 +1,149 @@
+.voice-input-container {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.voice-button {
+  color: #7c4dff !important;
+  width: 40px !important;
+  height: 40px !important;
+  transition: all 0.2s ease !important;
+}
+
+.voice-button.recording {
+  color: #e53935 !important;
+  animation: pulse 1.2s infinite;
+}
+
+.voice-button:hover:not(:disabled) {
+  background-color: rgba(124, 77, 255, 0.08) !important;
+  transform: scale(1.1);
+}
+
+.voice-button:disabled {
+  color: rgba(0, 0, 0, 0.26) !important;
+}
+
+.dark .voice-button:disabled {
+  color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.voice-status {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 4px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  white-space: nowrap;
+  animation: fadeIn 0.3s ease;
+  width: max-content; /* Ensure it fits the longer text */
+}
+
+.voice-status.dark {
+  background: rgba(40, 40, 40, 0.95);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.recording-text {
+  margin-left: 8px;
+  font-size: 11px; /* Make font size smaller to fit text */
+  font-weight: 500;
+  white-space: nowrap;
+  color: var(--text-primary);
+}
+
+.dark .recording-text {
+  color: var(--dark-text-primary);
+}
+
+.pulse-animation {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  height: 16px;
+}
+
+.pulse {
+  width: 3px;
+  height: 10px;
+  border-radius: 3px;
+  background-color: #e53935;
+}
+
+.pulse:nth-child(1) {
+  animation: pulse-wave 0.8s ease-in-out infinite;
+  animation-delay: 0s;
+}
+
+.pulse:nth-child(2) {
+  animation: pulse-wave 0.8s ease-in-out infinite;
+  animation-delay: 0.2s;
+}
+
+.pulse:nth-child(3) {
+  animation: pulse-wave 0.8s ease-in-out infinite;
+  animation-delay: 0.4s;
+}
+
+.voice-error {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(244, 67, 54, 0.9);
+  color: white;
+  border-radius: 12px;
+  padding: 4px 12px;
+  font-size: 11px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  white-space: nowrap;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(229, 57, 53, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 6px rgba(229, 57, 53, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(229, 57, 53, 0);
+  }
+}
+
+@keyframes pulse-wave {
+  0%, 100% {
+    height: 4px;
+  }
+  50% {
+    height: 12px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -10px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+/* Make sure we handle longer transcripts in tooltip */
+.MuiTooltip-tooltip {
+  max-width: 300px;
+  white-space: normal;
+}

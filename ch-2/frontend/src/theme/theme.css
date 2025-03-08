@@ -1,0 +1,194 @@
+:root {
+  /* Light theme (default) */
+  --primary-color: #7c4dff;
+  --primary-light: #b47cff;
+  --primary-dark: #3f1dcb;
+  --secondary-color: #f5f0ff;
+  --accent-color: #9c27b0;
+  --text-primary: #2c1810;
+  --text-secondary: #6b6b6b;
+  --background-color: #ffffff;
+  --background-secondary: #f5f0ff;
+  --border-color: #e0d4ff;
+  --message-user-bg: linear-gradient(135deg, #7c4dff, #9c27b0);
+  --message-user-text: #ffffff;
+  --message-bot-bg: #f5f0ff;
+  --message-bot-text: #2c1810;
+  --message-bot-border: #e0d4ff;
+  --input-bg: #ffffff;
+  --input-text: #2c1810;
+  --sidebar-bg: #ffffff;
+  --sidebar-text: #2c1810;
+  --sidebar-hover-bg: #f5f0ff;
+  --sidebar-border: #e0d4ff;
+  --header-bg: linear-gradient(135deg, #7c4dff, #9c27b0);
+  --header-text: #ffffff;
+  --shadow-sm: 0 2px 4px rgba(124, 77, 255, 0.1);
+  --shadow-md: 0 4px 8px rgba(124, 77, 255, 0.15);
+  --shadow-lg: 0 8px 16px rgba(124, 77, 255, 0.2);
+  --code-bg: #1e1e1e;
+  --code-text: #d4d4d4;
+  --code-border: #2d2d2d;
+  --scrollbar-track: #f1f1f1;
+  --scrollbar-thumb: #c5c5c5;
+  --scrollbar-thumb-hover: #a9a9a9;
+}
+
+/* Dark theme */
+body.dark-theme {
+  --primary-color: #9c56ff;
+  --primary-light: #c285ff;
+  --primary-dark: #7034e0;
+  --secondary-color: #282c34;
+  --accent-color: #bb6bd9;
+  --text-primary: #f0f0f0;
+  --text-secondary: #a0a0a0;
+  --background-color: #121212;
+  --background-secondary: #1e1e24;
+  --border-color: #3d3d46;
+  --message-user-bg: linear-gradient(135deg, #9c56ff, #bb6bd9);
+  --message-user-text: #ffffff;
+  --message-bot-bg: #282c34;
+  --message-bot-text: #f0f0f0;
+  --message-bot-border: #3d3d46;
+  --input-bg: #282c34;
+  --input-text: #f0f0f0;
+  --sidebar-bg: #1a1a1a;
+  --sidebar-text: #f0f0f0;
+  --sidebar-hover-bg: #282c34;
+  --sidebar-border: #3d3d46;
+  --header-bg: linear-gradient(135deg, #7034e0, #9c27b0);
+  --header-text: #ffffff;
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.5);
+  --code-bg: #000000;
+  --code-text: #f0f0f0;
+  --code-border: #333333;
+  --scrollbar-track: #282c34;
+  --scrollbar-thumb: #4d4d4d;
+  --scrollbar-thumb-hover: #5a5a5a;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+/* Base styles that apply to both themes */
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: var(--background-color);
+  color: var(--text-primary);
+}
+
+/* Theme-specific class modifiers */
+.dark-sidebar {
+  background-color: var(--sidebar-bg);
+  color: var(--sidebar-text);
+  border-color: var(--sidebar-border);
+}
+
+.dark-header {
+  background: var(--header-bg);
+}
+
+/* Login page theming */
+.dark-theme .login-container {
+  background: linear-gradient(135deg, #1e1e24, #121212);
+}
+
+.dark-theme .login-container::before,
+.dark-theme .login-container::after {
+  background: rgba(156, 86, 255, 0.05);
+}
+
+.dark-theme .login-box {
+  background: rgba(30, 30, 36, 0.8);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-color);
+}
+
+.dark-theme h1 {
+  color: var(--primary-light);
+}
+
+.dark-theme .google-login button {
+  background-color: #282c34 !important;
+  border-color: #3d3d46 !important;
+}
+
+.dark-theme .error-message {
+  background-color: rgba(216, 54, 113, 0.15);
+  border-left-color: #d83671;
+}
+
+/* Chat page theming */
+.dark-theme .app-container {
+  background-color: var(--background-color);
+}
+
+.dark-theme .chat-main {
+  background: var(--background-color);
+}
+
+.dark-theme .sidebar {
+  background: var(--sidebar-bg);
+}
+
+.dark-theme .message-input {
+  background: var(--input-bg) !important;
+  color: var(--input-text) !important;
+  border-color: var(--border-color);
+}
+
+.dark-theme .message-input::placeholder {
+  color: #888;
+}
+
+.dark-theme .message.bot {
+  background: var(--message-bot-bg);
+  color: var(--message-bot-text);
+  border-color: var(--message-bot-border);
+}
+
+.dark-theme .message.user {
+  background: var(--message-user-bg);
+  color: var(--message-user-text);
+}
+
+.dark-theme .edit-message-container {
+  background: linear-gradient(to bottom, #282c34, #1e1e24);
+  border-color: rgba(156, 86, 255, 0.2);
+}
+
+.dark-theme .edit-message-input {
+  background: var(--input-bg) !important;
+  color: var(--input-text);
+  border-color: var(--border-color);
+}
+
+/* Animation to indicate theme is changing */
+@keyframes themeTransition {
+  0% { opacity: 0.8; }
+  50% { opacity: 0.9; }
+  100% { opacity: 1; }
+}
+
+.theme-transition {
+  animation: themeTransition 0.3s ease;
+}
